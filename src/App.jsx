@@ -4,6 +4,7 @@ import "./App.css";
 import Header from "./Components/Header";
 import LandingPage from "./Components/LandingPage";
 import Recipes from "./Components/Recipes";
+import Recipe from "./Components/Recipe";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/allRecipes" element={<Recipes />} />
+            <Route path="/recipe/:id" element={<Recipe />} />
           </Routes>
         </div>
       </BrowserRouter>

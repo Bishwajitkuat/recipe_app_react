@@ -21,7 +21,7 @@ const Recipes = () => {
             flagUrl={""}
             recipeImgUrl={item.recipeImgUrl}
             recipeName={item.recipeName}
-            recipeUrl={""}
+            id={item.id}
             recipeDescription={item.description}
           />
         ))

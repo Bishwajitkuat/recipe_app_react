@@ -8,7 +8,8 @@
       "author": "typicode",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et odio dicta nm consequatur atque enim! Aliquid totam obcaecati maiores fugit dolores quidem aspernatur culpa quam ",
       "ingridient": "[{water: 1L}, {salt: 10g}, {rice: 200g}]",
-      "recipeFrom": "test"
+      "recipeFrom": "test",
+      "preparation": "em ipsum dolor sit amet consectetur adipisicing elit. Et odio dicta nm consequatur atque enim! Aliquid totam obcaecati maiores fugit"
     },
     {
       "id": 2,
@@ -18,7 +19,8 @@
       "author": "typicode",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et odio dicta nAliquid totam obcaecati maiores fugit dolores quidem aspernatur culpa quam ",
       "ingridient": "[{water: 1L}, {salt: 10g}, {rice: 200g}]",
-      "recipeFrom": "test"
+      "recipeFrom": "test",
+      "preparation": "em ipsum dolor sit amet consectetur adipisicing elit. Et odio dicta nm consequatur atque enim! Aliquid totam obcaecati maiores fugit"
     },
     {
       "id": 3,
@@ -28,7 +30,8 @@
       "author": "typicode",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et odio dicta nesciunt maiores cumque ad nihil, iusto a Aliquid totam obcaecati maiores fugit dolores quidem aspernatur culpa quam ",
       "ingridient": "[{water: 1L}, {salt: 10g}, {rice: 200g}]",
-      "recipeFrom": "test"
+      "recipeFrom": "test",
+      "preparation": "em ipsum dolor sit amet consectetur adipisicing elit. Et odio dicta nm consequatur atque enim! Aliquid totam obcaecati maiores fugit"
     }
   ]
 }

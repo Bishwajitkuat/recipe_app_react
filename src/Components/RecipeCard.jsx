@@ -8,7 +8,7 @@ const RecipeCard = (props) => {
       <img className="recipeImg" src={props.recipeImgUrl} alt="" />
       <h3>{props.recipeName}</h3>
       <p>{props.recipeDescription}</p>
-      <Link to={props.recipeUrl}>
+      <Link to={`/recipe/${props.id}`}>
         <button>See more</button>
       </Link>
     </div>
