@@ -1,37 +1,118 @@
 {
   "recipes": [
     {
-      "id": 1,
-      "recipeName": "Food 1",
-      "flagUrl": "flagUrl",
-      "recipeImgUrl": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Zm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
-      "author": "typicode",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et odio dicta nm consequatur atque enim! Aliquid totam obcaecati maiores fugit dolores quidem aspernatur culpa quam ",
-      "ingridient": "[{water: 1L}, {salt: 10g}, {rice: 200g}]",
+      "name": "Food 1",
+      "author": "test",
       "recipeFrom": "test",
-      "preparation": "em ipsum dolor sit amet consectetur adipisicing elit. Et odio dicta nm consequatur atque enim! Aliquid totam obcaecati maiores fugit"
-    },
-    {
-      "id": 2,
-      "recipeName": "Food 2",
-      "flagUrl": "flagUrl",
-      "recipeImgUrl": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60",
-      "author": "typicode",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et odio dicta nAliquid totam obcaecati maiores fugit dolores quidem aspernatur culpa quam ",
-      "ingridient": "[{water: 1L}, {salt: 10g}, {rice: 200g}]",
-      "recipeFrom": "test",
-      "preparation": "em ipsum dolor sit amet consectetur adipisicing elit. Et odio dicta nm consequatur atque enim! Aliquid totam obcaecati maiores fugit"
-    },
-    {
-      "id": 3,
-      "recipeName": "Food 3",
-      "flagUrl": "flagUrl",
-      "recipeImgUrl": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60",
-      "author": "typicode",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et odio dicta nesciunt maiores cumque ad nihil, iusto a Aliquid totam obcaecati maiores fugit dolores quidem aspernatur culpa quam ",
-      "ingridient": "[{water: 1L}, {salt: 10g}, {rice: 200g}]",
+      "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60",
+      "preparation": "em ipsum dolor sit amet consectetur adipisicing elit. Et odio dicta nm consequatur atque enim! Aliquid totam obcaecati maiores fugit",
+      "ingredients": [
+        {
+          "ingredient": "salt",
+          "amount": "1"
+        },
+        {
+          "ingredient": "salt",
+          "amount": "hk"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "name": "Food 1",
+      "author": "test",
       "recipeFrom": "test",
-      "preparation": "em ipsum dolor sit amet consectetur adipisicing elit. Et odio dicta nm consequatur atque enim! Aliquid totam obcaecati maiores fugit"
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et odio dicta nesciunt maiores cumque ad nihil, iusto a Aliquid totam obcaecati maiores fugit dolores quidem aspernatur culpa quam ",
+      "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60",
+      "preparation": "em ipsum dolor sit amet consectetur adipisicing elit. Et odio dicta nm consequatur atque enim! Aliquid totam obcaecati maiores fugit",
+      "ingredients": [
+        {
+          "ingredient": "salt",
+          "amount": "1"
+        },
+        {
+          "ingredient": "salt",
+          "amount": "hk"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "name": "Food 1",
+      "author": "test",
+      "recipeFrom": "test",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et odio dicta nesciunt maiores cumque ad nihil, iusto a Aliquid totam obcaecati maiores fugit dolores quidem aspernatur culpa quam ",
+      "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60",
+      "preparation": "em ipsum dolor sit amet consectetur adipisicing elit. Et odio dicta nm consequatur atque enim! Aliquid totam obcaecati maiores fugit",
+      "ingredients": [
+        {
+          "ingredient": "salt",
+          "amount": "1"
+        },
+        {
+          "ingredient": "salt",
+          "amount": "hk"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "name": "Test",
+      "author": "Test",
+      "recipeFrom": "Bangladesh",
+      "description": "Test",
+      "image": "Test",
+      "ingredients": [
+        {
+          "ingredient": "Test",
+          "amount": "1L"
+        },
+        {
+          "ingredient": "Test",
+          "amount": "200g"
+        },
+        {
+          "ingredient": "Test",
+          "amount": "10g"
+        },
+        {
+          "ingredient": "Test",
+          "amount": "500ml"
+        }
+      ],
+      "id": 4
+    },
+    {
+      "name": "Test",
+      "author": "Test",
+      "recipeFrom": "Test",
+      "description": "Test",
+      "image": "Test",
+      "ingredients": [
+        {
+          "ingredient": "Test",
+          "amount": "Test"
+        },
+        {
+          "ingredient": "Test",
+          "amount": "Test"
+        },
+        {
+          "ingredient": "Test",
+          "amount": "Test"
+        },
+        {
+          "ingredient": "Test",
+          "amount": "Test"
+        },
+        {
+          "ingredient": "Test",
+          "amount": "Test"
+        }
+      ],
+      "preparation": "Test",
+      "id": 5
     }
   ]
 }

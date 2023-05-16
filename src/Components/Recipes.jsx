@@ -19,8 +19,8 @@ const Recipes = () => {
           <RecipeCard
             key={item.id}
             flagUrl={""}
-            recipeImgUrl={item.recipeImgUrl}
-            recipeName={item.recipeName}
+            recipeImgUrl={item.image}
+            recipeName={item.name}
             id={item.id}
             recipeDescription={item.description}
           />

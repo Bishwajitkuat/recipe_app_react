@@ -7,6 +7,7 @@ const Create = () => {
   const [recipeFrom, setRecipeFrom] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
+  const [preparation, setPreparation] = useState("");
   const [ingredients, setIngredients] = useState([
     { ingredient: "", amount: "" },
     { ingredient: "", amount: "" },
@@ -20,8 +21,11 @@ const Create = () => {
       description,
       image,
       ingredients,
+      preparation,
     };
-    console.log(newPost);
+    axios
+      .post("http://localhost:3001/recipes", newPost)
+      .then((response) => console.log(response));
   };
 
   const handleIngredientChange = (e, i) => {
@@ -79,6 +83,15 @@ const Create = () => {
           name="description"
           onChange={(e) => setDescription(e.target.value)}
           value={description}
+        />
+      </div>
+      <div>
+        <label htmlFor="preparation">Preparation</label>
+        <input
+          type="text"
+          name="preparation"
+          onChange={(e) => setPreparation(e.target.value)}
+          value={preparation}
         />
       </div>
       <div>

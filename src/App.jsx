@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import "./App.css";
 import Header from "./Components/Header";
 import LandingPage from "./Components/LandingPage";
 import Recipes from "./Components/Recipes";
