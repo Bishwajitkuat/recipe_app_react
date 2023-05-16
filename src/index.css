@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+/* ############ header ############ */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5vh;
+  background-color: gray;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+}
+header nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+header a,
+header nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+/* ########## LanddingPage ############ */
+
+.heroDiv {
+  height: 50vh;
+  background-color: rgba(127, 255, 212, 0.324);
+  padding: 4rem 0 4rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.heroLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.heroLinkCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.heroLinkCards div {
+  border: 0.5px solid gray;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+/* ############ App ############# */
+
+.mainBody {
+  margin: 0 1rem;
+}
+
+/* ########### Recipes ############ */
+
+.recipes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* ############ RecipeCard ########### */
+.recipeCard {
+  padding: 1rem;
+  max-width: 200px;
+}
+.recipeImg {
+  width: 200px;
+}
