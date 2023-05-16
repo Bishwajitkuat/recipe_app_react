@@ -82,3 +82,21 @@ header nav ul li a {
 .recipeImg {
   width: 200px;
 }
+
+/* ########### Create ############ */
+
+.ingredients {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ingredient {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 2rem;
+}
+.ingredientBtns {
+  display: flex;
+}
