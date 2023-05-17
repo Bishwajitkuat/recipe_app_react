@@ -119,6 +119,30 @@
       ],
       "id": 4,
       "flagUrl": "https://flagcdn.com/fi.svg"
+    },
+    {
+      "name": "Rice",
+      "author": "Bisso",
+      "recipeFrom": "Bangladesh",
+      "description": "Rice is Main food in Bangladesh. Usually, people eat rice with some other curry.",
+      "image": "https://images.unsplash.com/photo-1577110058859-74547db40bc0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cmljZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60",
+      "ingredients": [
+        {
+          "ingredient": "Rice",
+          "amount": "200 gm"
+        },
+        {
+          "ingredient": "Water",
+          "amount": "1.5 time vol of rice"
+        },
+        {
+          "ingredient": "Salt",
+          "amount": "2g"
+        }
+      ],
+      "preparation": "Add water and rice and start boiling in high heat. When it boiled properly, stop heating, leave the rice to absorb all the moisture.",
+      "flagUrl": "https://flagcdn.com/bd.svg",
+      "id": 7
     }
   ]
 }
