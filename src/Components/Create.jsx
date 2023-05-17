@@ -152,7 +152,12 @@ const Create = () => {
               />
             </div>
             <div className="ingredientBtns">
-              <button onClick={(e) => handleRemoveIngre(e, index)}>🗑️</button>
+              <button
+                className="deleteIngrBtn"
+                onClick={(e) => handleRemoveIngre(e, index)}
+              >
+                🗑️
+              </button>
             </div>
           </div>
         ))}
