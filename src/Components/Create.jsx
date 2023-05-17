@@ -10,15 +10,17 @@ const Create = () => {
   const [image, setImage] = useState("");
   const [flagUrl, setFlagUrl] = useState("");
   const [preparation, setPreparation] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
   const [ingredients, setIngredients] = useState([
     { ingredient: "", amount: "" },
     { ingredient: "", amount: "" },
   ]);
 
   useEffect(() => {
-    axios
-      .get("https://restcountries.com/v3.1/all")
-      .then((response) => setCountries(response.data));
+    axios.get("https://restcountries.com/v3.1/all").then((response) => {
+      setIsLoading(false);
+      setCountries(response.data);
+    });
   }, []);
 
   const handleSelectChange = (e) => {
@@ -66,7 +68,9 @@ const Create = () => {
       setIngredients(ingre);
     }
   };
-  return (
+  return isLoading ? (
+    <p>Loading......</p>
+  ) : (
     <form className="createForm">
       <h2>Add new recipe</h2>
       <div className="inputDiv">
@@ -153,7 +157,7 @@ const Create = () => {
             </div>
             <div className="ingredientBtns">
               <button
-                className="deleteIngrBtn"
+                className="recipeCard"
                 onClick={(e) => handleRemoveIngre(e, index)}
               >
                 🗑️
