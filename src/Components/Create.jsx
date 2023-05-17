@@ -1,17 +1,36 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 const Create = () => {
   const [name, setName] = useState("");
   const [author, setAuthor] = useState("");
+  const [countries, setCountries] = useState([]);
   const [recipeFrom, setRecipeFrom] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
+  const [flagUrl, setFlagUrl] = useState("");
   const [preparation, setPreparation] = useState("");
   const [ingredients, setIngredients] = useState([
     { ingredient: "", amount: "" },
     { ingredient: "", amount: "" },
   ]);
+
+  useEffect(() => {
+    axios
+      .get("https://restcountries.com/v3.1/all")
+      .then((response) => setCountries(response.data));
+  }, []);
+
+  const handleSelectChange = (e) => {
+    setRecipeFrom(e.target.value);
+    const selected = countries.filter(
+      (item) => item.name.common === e.target.value
+    );
+    setFlagUrl(selected[0].flags.svg);
+
+    // setFlagUrl().data[0].flags.svg);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const newPost = {
@@ -22,10 +41,12 @@ const Create = () => {
       image,
       ingredients,
       preparation,
+      flagUrl,
     };
     axios
       .post("http://localhost:3001/recipes", newPost)
       .then((response) => console.log(response));
+    console.log(newPost);
   };
 
   const handleIngredientChange = (e, i) => {
@@ -69,30 +90,33 @@ const Create = () => {
       </div>
       <div>
         <label htmlFor="recipeFrom">Recipe From</label>
-        <input
-          type="text"
-          name="recipeFrom"
-          onChange={(e) => setRecipeFrom(e.target.value)}
-          value={recipeFrom}
-        />
+        <select onChange={(e) => handleSelectChange(e)}>
+          {countries.map((item, index) => (
+            <option key={index} value={item.name.common}>
+              {item.name.common}
+            </option>
+          ))}
+        </select>
       </div>
       <div>
         <label htmlFor="description">Description</label>
-        <input
-          type="text"
+        <textarea
           name="description"
           onChange={(e) => setDescription(e.target.value)}
           value={description}
-        />
+          cols="30"
+          rows="10"
+        ></textarea>
       </div>
       <div>
         <label htmlFor="preparation">Preparation</label>
-        <input
-          type="text"
+        <textarea
           name="preparation"
           onChange={(e) => setPreparation(e.target.value)}
           value={preparation}
-        />
+          cols="30"
+          rows="10"
+        ></textarea>
       </div>
       <div>
         <label htmlFor="image">Image</label>
@@ -132,8 +156,7 @@ const Create = () => {
           </div>
         ))}
       </div>
-
-      <button onClick={handleSubmit}>Submit</button>
+      <button onClick={handleSubmit}>Add new recipe</button>
     </form>
   );
 };

@@ -7,10 +7,15 @@ const LandingPage = () => {
     <div className="landingPage">
       <div className="heroDiv">
         <h1>Recipe</h1>
-        <p>Some text</p>
-        <Link to={"/allRecipes"}>
-          <button>Browse recipes</button>
-        </Link>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem
+          dicta dolore doloremque quasi amet deserunt non illo fugiat impedit
+          odio adipisci nam assumenda, enim molestiae vero rem reprehenderit,
+          nihil et maxime, error obcaecati? Itaque commodi molestiae officiis
+          quos quidem inventore, dolorum alias asperiores magnam? Dolore fugiat
+          deserunt incidunt voluptas asperiores?
+        </p>
+        <Link to={"/allRecipes"}>Browse all recipes</Link>
       </div>
       <div className="heroLinks">
         <h2>Looking for the recipes?</h2>
@@ -32,7 +37,8 @@ const LandingPage = () => {
           <HeroCard
             title={"Learn more about us"}
             text={"Lorem ipsum dolor sit amet ur pariatur beatae quam suscipit"}
-            link={"/allRecipes"}
+            link={"https://en.bc.fi/"}
+            target={"_blank"}
           />
         </div>
       </div>

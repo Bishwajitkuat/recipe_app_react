@@ -15,6 +15,7 @@ const Recipe = () => {
   return (
     <div>
       <h2>{recipe.name}</h2>
+      <img className="flagImg" src={recipe.flagUrl} alt="" />
       <p>{recipe.author}</p>
       <img src={recipe.image} alt="" />
       <h3>Description</h3>

@@ -18,11 +18,12 @@ const Recipes = () => {
         recipes.map((item) => (
           <RecipeCard
             key={item.id}
-            flagUrl={""}
+            recipeFrom={item.recipeFrom}
+            flagUrl={item.flagUrl}
             recipeImgUrl={item.image}
             recipeName={item.name}
             id={item.id}
-            recipeDescription={item.description}
+            author={item.author}
           />
         ))
       ) : (

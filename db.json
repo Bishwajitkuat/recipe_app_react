@@ -2,8 +2,8 @@
   "recipes": [
     {
       "name": "Food 1",
-      "author": "test",
-      "recipeFrom": "test",
+      "author": "Author",
+      "recipeFrom": "Finland",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et odio dicta nesciunt maiores cumque ad nihil, iusto a Aliquid totam obcaecati maiores fugit dolores quidem aspernatur culpa quam ",
       "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60",
       "preparation": "em ipsum dolor sit amet consectetur adipisicing elit. Et odio dicta nm consequatur atque enim! Aliquid totam obcaecati maiores fugit",
@@ -17,12 +17,13 @@
           "amount": "hk"
         }
       ],
-      "id": 3
+      "id": 3,
+      "flagUrl": "https://flagcdn.com/fi.svg"
     },
     {
       "name": "Food 1",
-      "author": "test",
-      "recipeFrom": "test",
+      "author": "Author",
+      "recipeFrom": "Finland",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et odio dicta nesciunt maiores cumque ad nihil, iusto a Aliquid totam obcaecati maiores fugit dolores quidem aspernatur culpa quam ",
       "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60",
       "preparation": "em ipsum dolor sit amet consectetur adipisicing elit. Et odio dicta nm consequatur atque enim! Aliquid totam obcaecati maiores fugit",
@@ -36,12 +37,13 @@
           "amount": "hk"
         }
       ],
-      "id": 1
+      "id": 1,
+      "flagUrl": "https://flagcdn.com/fi.svg"
     },
     {
       "name": "Food 1",
-      "author": "test",
-      "recipeFrom": "test",
+      "author": "Author",
+      "recipeFrom": "Finland",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et odio dicta nesciunt maiores cumque ad nihil, iusto a Aliquid totam obcaecati maiores fugit dolores quidem aspernatur culpa quam ",
       "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60",
       "preparation": "em ipsum dolor sit amet consectetur adipisicing elit. Et odio dicta nm consequatur atque enim! Aliquid totam obcaecati maiores fugit",
@@ -55,64 +57,8 @@
           "amount": "hk"
         }
       ],
-      "id": 2
-    },
-    {
-      "name": "Test",
-      "author": "Test",
-      "recipeFrom": "Bangladesh",
-      "description": "Test",
-      "image": "Test",
-      "ingredients": [
-        {
-          "ingredient": "Test",
-          "amount": "1L"
-        },
-        {
-          "ingredient": "Test",
-          "amount": "200g"
-        },
-        {
-          "ingredient": "Test",
-          "amount": "10g"
-        },
-        {
-          "ingredient": "Test",
-          "amount": "500ml"
-        }
-      ],
-      "id": 4
-    },
-    {
-      "name": "Test",
-      "author": "Test",
-      "recipeFrom": "Test",
-      "description": "Test",
-      "image": "Test",
-      "ingredients": [
-        {
-          "ingredient": "Test",
-          "amount": "Test"
-        },
-        {
-          "ingredient": "Test",
-          "amount": "Test"
-        },
-        {
-          "ingredient": "Test",
-          "amount": "Test"
-        },
-        {
-          "ingredient": "Test",
-          "amount": "Test"
-        },
-        {
-          "ingredient": "Test",
-          "amount": "Test"
-        }
-      ],
-      "preparation": "Test",
-      "id": 5
+      "id": 2,
+      "flagUrl": "https://flagcdn.com/fi.svg"
     }
   ]
 }

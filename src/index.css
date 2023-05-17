@@ -18,10 +18,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 5vh;
-  background-color: gray;
+  height: 2vh;
+  background-color: black;
   padding: 1rem 2rem;
-  border-radius: 0.5rem;
 }
 header nav ul {
   display: flex;
@@ -31,17 +30,40 @@ header nav ul {
 header a,
 header nav ul li a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 /* ########## LanddingPage ############ */
 
+.landingPage {
+  margin-bottom: 2rem;
+}
+
 .heroDiv {
-  height: 50vh;
-  background-color: rgba(127, 255, 212, 0.324);
+  background-image: url("./assets/backgroundimg.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  height: 45vh;
   padding: 4rem 0 4rem 4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  color: white;
+}
+.heroDiv p {
+  max-width: 50vw;
+  background-color: rgba(0, 0, 0, 0.558);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+.heroDiv a {
+  background-color: rgba(0, 0, 0, 0.614);
+  max-width: fit-content;
+  padding: 0.5rem 1rem;
+  color: white;
+  border-radius: 0.5rem;
+  text-decoration: none;
 }
 .heroLinks {
   display: flex;
@@ -82,7 +104,10 @@ header nav ul li a {
 .recipeImg {
   width: 200px;
 }
-
+.flagImg {
+  width: 3rem;
+  border-radius: 50%;
+}
 /* ########### Create ############ */
 
 .ingredients {
