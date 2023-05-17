@@ -87,6 +87,9 @@ header nav ul li a {
 
 .mainBody {
   margin: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ########### Recipes ############ */
@@ -96,6 +99,24 @@ header nav ul li a {
   flex-wrap: wrap;
 }
 
+/* ########### Recipe ############ */
+.recipe {
+  margin: 0 auto;
+  max-width: 80vw;
+  line-height: 1.7;
+}
+.recipeBody {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.recipeBodyImg {
+  width: 100%;
+  border-radius: 5px;
+}
+.recipe li {
+  list-style-type: circle;
+}
 /* ############ RecipeCard ########### */
 .recipeCard {
   padding: 1rem;
@@ -110,18 +131,62 @@ header nav ul li a {
 }
 /* ########### Create ############ */
 
+.createForm {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  max-width: 80vw;
+  padding-bottom: 3rem;
+  gap: 2rem;
+}
+
 .ingredients {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  gap: 2rem;
+}
+.inputDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
 }
 .ingredient {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: center;
   gap: 2rem;
 }
-.ingredientBtns {
+.ingredient label {
+  min-width: 5rem;
+}
+.ingredient div {
   display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.createForm button {
+  max-width: fit-content;
+  border-radius: 0.5rem;
+  border: 1px solid gray;
+}
+.createForm input,
+textarea,
+select {
+  /* min-height: 2rem; */
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+.createForm label {
+  font-weight: bold;
+}
+.newIngreBtn,
+.addRecipeBtn {
+  padding: 0.5rem 1rem;
+}
+.addRecipeBtn {
+  align-self: center;
 }

@@ -59,6 +59,30 @@
       ],
       "id": 2,
       "flagUrl": "https://flagcdn.com/fi.svg"
+    },
+    {
+      "name": "",
+      "author": "",
+      "recipeFrom": "",
+      "description": "",
+      "image": "",
+      "ingredients": [
+        {
+          "ingredient": "",
+          "amount": ""
+        },
+        {
+          "ingredient": "",
+          "amount": ""
+        },
+        {
+          "ingredient": "",
+          "amount": ""
+        }
+      ],
+      "preparation": "",
+      "flagUrl": "",
+      "id": 4
     }
   ]
 }

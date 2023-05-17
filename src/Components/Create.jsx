@@ -45,8 +45,7 @@ const Create = () => {
     };
     axios
       .post("http://localhost:3001/recipes", newPost)
-      .then((response) => console.log(response));
-    console.log(newPost);
+      .then((response) => alert("The recipe added!"));
   };
 
   const handleIngredientChange = (e, i) => {
@@ -68,9 +67,9 @@ const Create = () => {
     }
   };
   return (
-    <form>
+    <form className="createForm">
       <h2>Add new recipe</h2>
-      <div>
+      <div className="inputDiv">
         <label htmlFor="name">Name</label>
         <input
           type="text"
@@ -79,7 +78,7 @@ const Create = () => {
           value={name}
         />
       </div>
-      <div>
+      <div className="inputDiv">
         <label htmlFor="author">Author</label>
         <input
           type="text"
@@ -88,17 +87,20 @@ const Create = () => {
           value={author}
         />
       </div>
-      <div>
+      <div className="inputDiv">
         <label htmlFor="recipeFrom">Recipe From</label>
         <select onChange={(e) => handleSelectChange(e)}>
-          {countries.map((item, index) => (
-            <option key={index} value={item.name.common}>
-              {item.name.common}
-            </option>
-          ))}
+          {countries
+            .map((item) => item.name.common)
+            .sort()
+            .map((item, index) => (
+              <option key={index} value={item}>
+                {item}
+              </option>
+            ))}
         </select>
       </div>
-      <div>
+      <div className="inputDiv">
         <label htmlFor="description">Description</label>
         <textarea
           name="description"
@@ -108,7 +110,7 @@ const Create = () => {
           rows="10"
         ></textarea>
       </div>
-      <div>
+      <div className="inputDiv">
         <label htmlFor="preparation">Preparation</label>
         <textarea
           name="preparation"
@@ -118,7 +120,7 @@ const Create = () => {
           rows="10"
         ></textarea>
       </div>
-      <div>
+      <div className="inputDiv">
         <label htmlFor="image">Image</label>
         <input
           type="text"
@@ -127,7 +129,7 @@ const Create = () => {
           value={image}
         />
       </div>
-      <h3>Ingridients</h3>
+      <label>Ingredients</label>
       <div className="ingredients">
         {ingredients.map((item, index) => (
           <div className="ingredient" key={index}>
@@ -150,13 +152,17 @@ const Create = () => {
               />
             </div>
             <div className="ingredientBtns">
-              <button onClick={handleAddIngre}>+</button>
-              <button onClick={(e) => handleRemoveIngre(e, index)}>-</button>
+              <button onClick={(e) => handleRemoveIngre(e, index)}>🗑️</button>
             </div>
           </div>
         ))}
+        <button className="newIngreBtn" onClick={(e) => handleAddIngre(e)}>
+          New field
+        </button>
       </div>
-      <button onClick={handleSubmit}>Add new recipe</button>
+      <button className="addRecipeBtn" onClick={handleSubmit}>
+        Add new recipe
+      </button>
     </form>
   );
 };
