@@ -69,7 +69,9 @@ const Create = () => {
     }
   };
   return isLoading ? (
-    <p>Loading......</p>
+    <div className="loaderParent">
+      <span className="loader"></span>
+    </div>
   ) : (
     <form className="createForm">
       <h2>Add new recipe</h2>

@@ -15,7 +15,9 @@ const Recipe = () => {
   useEffect(() => getOne(), []);
 
   return isLoading ? (
-    <p>Loading.....</p>
+    <div className="loaderParent">
+      <span className="loader"></span>
+    </div>
   ) : (
     <div className="recipe">
       <div className="recipeHeading">

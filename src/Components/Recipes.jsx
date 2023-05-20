@@ -15,7 +15,9 @@ const Recipes = () => {
   useEffect(() => getAll(), []);
 
   return isLoading ? (
-    <p>Loading.....</p>
+    <div className="loaderParent">
+      <span className="loader"></span>
+    </div>
   ) : (
     <div className="recipes">
       {recipes.map((item) => (
