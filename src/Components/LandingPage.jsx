@@ -6,7 +6,7 @@ const LandingPage = () => {
   return (
     <div className="landingPage">
       <div className="heroDiv">
-        <h1>Recipe</h1>
+        <h1>Try & changeTest</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem
           dicta dolore doloremque quasi amet deserunt non illo fugiat impedit
@@ -18,7 +18,6 @@ const LandingPage = () => {
         <Link to={"/allRecipes"}>Browse all recipes</Link>
       </div>
       <div className="heroLinks">
-        <h2>Looking for the recipes?</h2>
         <div className="heroLinkCards">
           <HeroCard
             title={"Browse recipes"}
