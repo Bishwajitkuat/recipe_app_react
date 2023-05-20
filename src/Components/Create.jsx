@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const Create = () => {
   const [name, setName] = useState("");
@@ -16,6 +17,7 @@ const Create = () => {
     { ingredient: "", amount: "" },
     { ingredient: "", amount: "" },
   ]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios.get("https://restcountries.com/v3.1/all").then((response) => {
@@ -59,6 +61,7 @@ const Create = () => {
           showConfirmButton: false,
           timer: 1500,
         });
+        navigate(`/recipe/${response.data.id}`);
       })
       .catch((err) => {
         Swal.fire({

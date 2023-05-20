@@ -156,8 +156,7 @@ header nav ul li a {
   position: relative;
 }
 .recipeCard:hover {
-  transform: scale(1.1);
-  z-index: 99;
+  filter: contrast(150%);
 }
 .recipeImg {
   width: 100%;
