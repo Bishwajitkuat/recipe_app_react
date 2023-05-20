@@ -1,12 +1,14 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const Recipe = () => {
   const { id } = useParams();
   const [recipe, setRecipe] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
   const getOne = () => {
     axios
       .get(`http://localhost:3001/recipes/${id}`)
@@ -25,6 +27,29 @@ const Recipe = () => {
       });
   };
   useEffect(() => getOne(), []);
+  const handleDelete = (id) => {
+    axios
+      .delete(`http://localhost:3001/recipes/${id}`)
+      .then((response) => {
+        Swal.fire({
+          position: "center-center",
+          icon: "warning",
+          title: "Your recipe has been deleted",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        navigate("/allRecipes");
+      })
+      .catch((err) => {
+        Swal.fire({
+          position: "center-center",
+          icon: "error",
+          title: err.message,
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      });
+  };
 
   return isLoading ? (
     <div className="loaderParent">
@@ -51,6 +76,9 @@ const Recipe = () => {
               </li>
             ))}
           </ul>
+          <button className="delBtn" onClick={(e) => handleDelete(recipe.id)}>
+            Delete
+          </button>
         </div>
         <img className="recipeBodyImg" src={recipe.image} alt="" />
       </div>

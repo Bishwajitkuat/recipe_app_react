@@ -180,7 +180,7 @@ const Create = () => {
             </div>
             <div className="ingredientBtns">
               <button
-                className="recipeCard"
+                className="delBtn"
                 onClick={(e) => handleRemoveIngre(e, index)}
               >
                 🗑️

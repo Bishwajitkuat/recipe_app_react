@@ -140,6 +140,11 @@ header nav ul li a {
   width: 3rem;
   border-radius: 50%;
 }
+.recipe button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid black;
+}
 /* ############ RecipeCard ########### */
 .recipeCard {
   padding: 1rem;
@@ -232,7 +237,7 @@ select {
 .addRecipeBtn {
   align-self: center;
 }
-.deleteIngrBtn:hover {
+.delBtn:hover {
   background-color: rgba(255, 0, 0, 0.684);
 }
 
