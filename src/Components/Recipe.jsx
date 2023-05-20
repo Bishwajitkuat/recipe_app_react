@@ -1,16 +1,28 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Recipe = () => {
   const { id } = useParams();
   const [recipe, setRecipe] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const getOne = () => {
-    axios.get(`http://localhost:3001/recipes/${id}`).then((response) => {
-      setIsLoading(false);
-      return setRecipe(response.data);
-    });
+    axios
+      .get(`http://localhost:3001/recipes/${id}`)
+      .then((response) => {
+        setIsLoading(false);
+        return setRecipe(response.data);
+      })
+      .catch((err) => {
+        Swal.fire({
+          position: "center-center",
+          icon: "error",
+          title: err.message,
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      });
   };
   useEffect(() => getOne(), []);
 

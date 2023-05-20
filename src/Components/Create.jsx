@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 const Create = () => {
   const [name, setName] = useState("");
@@ -47,7 +48,27 @@ const Create = () => {
     };
     axios
       .post("http://localhost:3001/recipes", newPost)
-      .then((response) => alert("The recipe added!"));
+      .then((response) => {
+        if (!response.status) {
+          throw new Error("Can not connect to detabase!");
+        }
+        Swal.fire({
+          position: "center-center",
+          icon: "success",
+          title: "Your recipe has been saved",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      })
+      .catch((err) => {
+        Swal.fire({
+          position: "center-center",
+          icon: "error",
+          title: err.message,
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      });
   };
 
   const handleIngredientChange = (e, i) => {
