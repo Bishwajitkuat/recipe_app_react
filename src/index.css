@@ -112,7 +112,7 @@ header nav ul li a {
 /* ########### Recipes ############ */
 
 .recipes {
-  margin: 2rem 0;
+  padding: 2rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
@@ -128,6 +128,13 @@ header nav ul li a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+}
+.recipeBody .btnDiv {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: left;
+  align-items: center;
 }
 .recipeBodyImg {
   width: 100%;
@@ -150,7 +157,7 @@ header nav ul li a {
   padding: 1rem;
   display: grid;
   grid-template-columns: 1fr;
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
   border-radius: 0.5rem;
   gap: 0;
   position: relative;

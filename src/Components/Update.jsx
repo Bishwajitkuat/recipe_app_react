@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
-const Create = () => {
+const Update = () => {
+  const { id } = useParams();
   const [name, setName] = useState("");
   const [author, setAuthor] = useState("");
   const [countries, setCountries] = useState([]);
@@ -18,12 +19,47 @@ const Create = () => {
     { ingredient: "", amount: "" },
   ]);
   const navigate = useNavigate();
-
+  const getOne = () => {
+    axios
+      .get(`http://localhost:3001/recipes/${id}`)
+      .then((response) => {
+        setIsLoading(false);
+        setName(response.data.name);
+        setAuthor(response.data.author);
+        setRecipeFrom(response.data.recipeFrom);
+        setDescription(response.data.description);
+        setImage(response.data.image);
+        setFlagUrl(response.data.flagUrl);
+        setPreparation(response.data.preparation);
+        setIngredients(response.data.ingredients);
+      })
+      .catch((err) => {
+        Swal.fire({
+          position: "center",
+          icon: "error",
+          title: err.message,
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      });
+  };
   useEffect(() => {
-    axios.get("https://restcountries.com/v3.1/all").then((response) => {
-      setIsLoading(false);
-      setCountries(response.data);
-    });
+    axios
+      .get("https://restcountries.com/v3.1/all")
+      .then((response) => {
+        setIsLoading(false);
+        setCountries(response.data);
+      })
+      .catch((err) => {
+        Swal.fire({
+          position: "center",
+          icon: "error",
+          title: err.message,
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      });
+    getOne();
   }, []);
 
   const handleSelectChange = (e) => {
@@ -32,8 +68,6 @@ const Create = () => {
       (item) => item.name.common === e.target.value
     );
     setFlagUrl(selected[0].flags.svg);
-
-    // setFlagUrl().data[0].flags.svg);
   };
 
   const handleSubmit = (e) => {
@@ -49,7 +83,7 @@ const Create = () => {
       flagUrl,
     };
     axios
-      .post("http://localhost:3001/recipes", newPost)
+      .patch(`http://localhost:3001/recipes/${id}`, newPost)
       .then((response) => {
         if (!response.status) {
           throw new Error("Can not connect to detabase!");
@@ -98,7 +132,7 @@ const Create = () => {
     </div>
   ) : (
     <form className="createForm">
-      <h2>Add new recipe</h2>
+      <h2>Edit recipe</h2>
       <div className="inputDiv">
         <label htmlFor="name">Name</label>
         <input
@@ -119,7 +153,7 @@ const Create = () => {
       </div>
       <div className="inputDiv">
         <label htmlFor="recipeFrom">Recipe From</label>
-        <select onChange={(e) => handleSelectChange(e)}>
+        <select value={recipeFrom} onChange={(e) => handleSelectChange(e)}>
           {countries
             .map((item) => item.name.common)
             .sort()
@@ -196,10 +230,10 @@ const Create = () => {
         </button>
       </div>
       <button className="addRecipeBtn" onClick={handleSubmit}>
-        Post
+        Save
       </button>
     </form>
   );
 };
 
-export default Create;
+export default Update;

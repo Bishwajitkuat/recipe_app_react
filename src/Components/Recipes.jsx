@@ -15,7 +15,7 @@ const Recipes = () => {
       })
       .catch((err) => {
         Swal.fire({
-          position: "center-center",
+          position: "center",
           icon: "error",
           title: err.message,
           showConfirmButton: false,

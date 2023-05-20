@@ -18,7 +18,7 @@ const Recipe = () => {
       })
       .catch((err) => {
         Swal.fire({
-          position: "center-center",
+          position: "center",
           icon: "error",
           title: err.message,
           showConfirmButton: false,
@@ -32,7 +32,7 @@ const Recipe = () => {
       .delete(`http://localhost:3001/recipes/${id}`)
       .then((response) => {
         Swal.fire({
-          position: "center-center",
+          position: "center",
           icon: "warning",
           title: "Your recipe has been deleted",
           showConfirmButton: false,
@@ -76,9 +76,14 @@ const Recipe = () => {
               </li>
             ))}
           </ul>
-          <button className="delBtn" onClick={(e) => handleDelete(recipe.id)}>
-            Delete
-          </button>
+          <div className="btnDiv">
+            <Link to={`/update/${recipe.id}`}>
+              <button>Edit</button>
+            </Link>
+            <button className="delBtn" onClick={(e) => handleDelete(recipe.id)}>
+              Delete
+            </button>
+          </div>
         </div>
         <img className="recipeBodyImg" src={recipe.image} alt="" />
       </div>

@@ -1,8 +1,8 @@
 {
   "recipes": [
     {
-      "name": "Food 1",
-      "author": "Author",
+      "name": "Food 1 update update",
+      "author": "Author update",
       "recipeFrom": "Finland",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et odio dicta nesciunt maiores cumque ad nihil, iusto a Aliquid totam obcaecati maiores fugit dolores quidem aspernatur culpa quam ",
       "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60",
@@ -15,6 +15,14 @@
         {
           "ingredient": "salt",
           "amount": "hk"
+        },
+        {
+          "ingredient": "update",
+          "amount": "300gm"
+        },
+        {
+          "ingredient": "2nd update",
+          "amount": "300gm"
         }
       ],
       "id": 3,
@@ -43,26 +51,6 @@
       "preparation": "Add water and rice and start boiling in high heat. When it boiled properly, stop heating, leave the rice to absorb all the moisture.",
       "flagUrl": "https://flagcdn.com/bd.svg",
       "id": 7
-    },
-    {
-      "name": "kjhkjhkjhkj",
-      "author": "hkj",
-      "recipeFrom": "Haiti",
-      "description": "hkjhkhkjhkjh",
-      "image": "kjhkhkhk",
-      "ingredients": [
-        {
-          "ingredient": "hkjhkjhkjhk",
-          "amount": "hkjhk"
-        },
-        {
-          "ingredient": "kjhk",
-          "amount": "hk"
-        }
-      ],
-      "preparation": "jkhkjhkjhkh",
-      "flagUrl": "https://flagcdn.com/ht.svg",
-      "id": 8
     }
   ]
 }
