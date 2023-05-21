@@ -6,6 +6,7 @@ import Recipes from "./Components/Recipes";
 import Recipe from "./Components/Recipe";
 import Create from "./Components/Create";
 import Update from "./Components/Update";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/update/:id" element={<Update />} />
           </Routes>
         </div>
+        <Footer />
       </BrowserRouter>
     </div>
   );

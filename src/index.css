@@ -56,6 +56,7 @@ header nav ul li a {
 
 .heroDiv {
   height: 100vh;
+  width: 100vw;
   padding: 4rem 0 4rem 4rem;
   display: flex;
   flex-direction: column;
@@ -245,6 +246,66 @@ select {
 }
 .delBtn:hover {
   background-color: rgba(255, 0, 0, 0.684);
+}
+/* ######## Footer ######### */
+.footer {
+  min-width: 100vw;
+  color: white;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0px;
+}
+.copyWright {
+  font-style: italic;
+  font-size: 0.75rem;
+}
+
+/* ########### mobile responsive ######### */
+@media (max-width: 640px) {
+  .landingPage {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  body {
+    max-width: 100vw;
+  }
+  .heroDiv {
+    padding: 0 0 0 0.5rem;
+    min-width: 95vw;
+  }
+  .heroDiv h1 {
+    font-size: 2rem;
+  }
+  .heroDiv p {
+    min-width: 80%;
+  }
+  .heroLinks {
+    padding: 0;
+  }
+  .heroLinkCards {
+    max-width: 100%;
+  }
+  header {
+    padding: 0 1rem;
+    min-width: 100vw;
+    justify-content: center;
+  }
+  header h1 {
+    font-size: 1.2rem;
+  }
+  nav ul a {
+    font-size: 0.7rem;
+    padding: 0;
+  }
+  .App {
+    max-width: 100vw;
+  }
+  .recipes {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ########### loader ########### */
