@@ -1,8 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom";
 
 const Recipe = () => {
   const { id } = useParams();
@@ -71,7 +70,7 @@ const Recipe = () => {
           <h3>Ingredients</h3>
           <ul>
             {recipe.ingredients.map((item, index) => (
-              <li key={index}>
+              <li key={item.ingrID}>
                 {item.ingredient} : {item.amount}
               </li>
             ))}

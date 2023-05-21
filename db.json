@@ -1,7 +1,7 @@
 {
   "recipes": [
     {
-      "name": "Food 1 update update",
+      "name": "Food 1 update",
       "author": "Author update",
       "recipeFrom": "Finland",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et odio dicta nesciunt maiores cumque ad nihil, iusto a Aliquid totam obcaecati maiores fugit dolores quidem aspernatur culpa quam ",
@@ -10,19 +10,28 @@
       "ingredients": [
         {
           "ingredient": "salt",
-          "amount": "1"
+          "amount": "1",
+          "ingrID": 0
         },
         {
           "ingredient": "salt",
-          "amount": "hk"
+          "amount": "hk",
+          "ingrID": 1
         },
         {
           "ingredient": "update",
-          "amount": "300gm"
+          "amount": "300gm",
+          "ingrID": 2
         },
         {
           "ingredient": "2nd update",
-          "amount": "300gm"
+          "amount": "300gm",
+          "ingrID": 3
+        },
+        {
+          "ingredient": "3rd update",
+          "amount": "400gm",
+          "ingrID": 4
         }
       ],
       "id": 3,
@@ -37,15 +46,18 @@
       "ingredients": [
         {
           "ingredient": "Rice",
-          "amount": "200 gm"
+          "amount": "200 gm",
+          "ingrID": 0
         },
         {
           "ingredient": "Water",
-          "amount": "1.5 time vol of rice"
+          "amount": "1.5 time vol of rice",
+          "ingrID": 1
         },
         {
           "ingredient": "Salt",
-          "amount": "2g"
+          "amount": "2g",
+          "ingrID": 2
         }
       ],
       "preparation": "Add water and rice and start boiling in high heat. When it boiled properly, stop heating, leave the rice to absorb all the moisture.",

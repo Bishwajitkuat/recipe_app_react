@@ -23,7 +23,6 @@ const Recipes = () => {
         });
       });
   };
-  // getAll();
   useEffect(() => getAll(), []);
 
   return isLoading ? (

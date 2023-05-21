@@ -14,9 +14,12 @@ const Create = () => {
   const [preparation, setPreparation] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [ingredients, setIngredients] = useState([
-    { ingredient: "", amount: "" },
-    { ingredient: "", amount: "" },
+    { ingredient: "", amount: "", ingrID: 0 },
+    { ingredient: "", amount: "", ingrID: 1 },
   ]);
+  const nextIngrId = () => {
+    return Math.max(...ingredients.map((item) => item.ingrID)) + 1;
+  };
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -81,7 +84,10 @@ const Create = () => {
   };
   const handleAddIngre = (e) => {
     e.preventDefault();
-    const ingre = [...ingredients, { ingredient: "", amount: "" }];
+    const ingre = [
+      ...ingredients,
+      { ingredient: "", amount: "", ingrID: nextIngrId() },
+    ];
     setIngredients(ingre);
   };
   const handleRemoveIngre = (e, index) => {
@@ -124,7 +130,7 @@ const Create = () => {
             .map((item) => item.name.common)
             .sort()
             .map((item, index) => (
-              <option key={index} value={item}>
+              <option key={item} value={item}>
                 {item}
               </option>
             ))}
@@ -162,7 +168,7 @@ const Create = () => {
       <label>Ingredients</label>
       <div className="ingredients">
         {ingredients.map((item, index) => (
-          <div className="ingredient" key={index}>
+          <div className="ingredient" key={item.ingrID}>
             <div>
               <label htmlFor="ingredient">Ingredient</label>
               <input
