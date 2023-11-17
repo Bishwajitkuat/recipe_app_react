@@ -2,7 +2,9 @@
 
 ## Description
 
-This project is part of my React basic course in Helsinki Business college. In the app user can view all the prvious reccipe, create new recipe, update existing recipe and delete posts. The project includes a json server.
+This project is part of my React basic course in Helsinki Business college. It's a CRUD app for recipes. Users can view all the prvious reccipe, create new recipe, update existing recipe and delete recipes. I have used Json Server for backend and React and Axios in fontend.
+
+<img src="recipe_app.png" alt="project image">
 
 ## Installetion
 
